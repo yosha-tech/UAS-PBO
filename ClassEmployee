@@ -1,0 +1,84 @@
+// Kelas Employee
+class Employee {
+    // Atribut yang di-encapsulate
+    private String name;
+
+    // Konstruktor
+    public Employee(String name) {
+        this.name = name;
+    }
+
+    // Metode get untuk atribut name
+    public String getName() {
+        return name;
+    }
+
+    // Metode set untuk atribut name
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    // Metode work yang akan di-implementasikan oleh kelas turunan
+    public void work() {
+        System.out.println("Employee " + name + " is working.");
+    }
+}
+
+// Kelas Manager, turunan dari Employee
+class Manager extends Employee {
+    // Konstruktor
+    public Manager(String name) {
+        super(name);
+    }
+
+    // Implementasi metode work untuk Manager
+    @Override
+    public void work() {
+        System.out.println("Manager " + getName() + " is managing the team.");
+    }
+}
+
+// Kelas Developer, turunan dari Employee
+class Developer extends Employee {
+    // Konstruktor
+    public Developer(String name) {
+        super(name);
+    }
+
+    // Implementasi metode work untuk Developer
+    @Override
+    public void work() {
+        System.out.println("Developer " + getName() + " is coding.");
+    }
+}
+
+// Kelas Designer, turunan dari Employee
+class Designer extends Employee {
+    // Konstruktor
+    public Designer(String name) {
+        super(name);
+    }
+
+    // Implementasi metode work untuk Designer
+    @Override
+    public void work() {
+        System.out.println("Designer " + getName() + " is designing.");
+    }
+}
+
+// Contoh penggunaan kelas-kelas di atas
+public class Main {
+    public static void main(String[] args) {
+        // Membuat objek Manager
+        Manager manager = new Manager("John Manager");
+        manager.work();
+
+        // Membuat objek Developer
+        Developer developer = new Developer("Jane Developer");
+        developer.work();
+
+        // Membuat objek Designer
+        Designer designer = new Designer("Doe Designer");
+        designer.work();
+    }
+}
