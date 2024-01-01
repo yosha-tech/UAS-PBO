@@ -1,0 +1,22 @@
++----------------+         +-----------+           +--------------+
+|    <<class>>   |         |  <<class>>|           |  <<class>>   |
+|     Shape      |         |  Circle   |           | Rectangle    |
++----------------+         +-----------+           +--------------+
+| -color: String |         | -radius: double        | -length: double|
+| +Shape(String) |         | +Circle(String, double)| +Rectangle(String, double, double) |
+| +getColor(): String |    | +getArea(): double    | +getArea(): double |
+| +getArea(): double   |    +-----------------------+----------------|
++----------------+                       |
+       |                               |
+       |                               |
+       |                               |
+       v                               v
++----------------+               +--------------+
+|  <<class>>    |               |  <<class>>   |
+| ShapeMain      |               |  Scanner     |
++----------------+               +--------------+
+| <<static>>     |               | <<class>>    |
+| +main(String[]): void |        | -input: InputStream |
++----------------+               | +nextLine(): String |
+                                | +nextDouble(): double |
+                                +----------------------+
